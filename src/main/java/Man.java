@@ -18,19 +18,34 @@ public class Man {
     }
 
     public void moveUp() {
-        this.positionY = positionY == 0 ? 0 : positionY - 1;
+        if (positionY == 0) {
+            System.out.println("I can't go there, the wall is blocking me!");
+        } else {
+            positionY = positionY - 1;
+        }
     }
 
     public void moveDown() {
-        this.positionY = positionY == squareGridWallSize ? squareGridWallSize : positionY + 1;
+        if (positionY == squareGridWallSize) {
+            System.out.println("I can't go there, the wall is blocking me!");
+        } else {
+            positionY = positionY + 1;
+        }
     }
 
     public void moveLeft() {
-        this.positionX = positionX == 0 ? 0 : positionX - 1;
+        if (positionX == 0) {
+            System.out.println("I can't go there, the wall is blocking me!");
+        } else {
+            positionX = positionX - 1;
+        }
     }
 
     public void moveRight() {
-        this.positionX = positionX == squareGridWallSize ? squareGridWallSize: positionX + 1;
+        if (positionX == squareGridWallSize) {
+            System.out.println("I can't go there, the wall is blocking me!");
+        } else {
+            positionX = positionX + 1;
+        }
     }
-
 }
